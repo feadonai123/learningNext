@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 350px;
+  padding: 20px;
+  padding: 10;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.input {
+  width: 100%;
+  border-width: 1px;
+  border-radius: 20px;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: black;
+  outline: 0;
+}
+.button {
+  outline: 0;
+  box-shadow: none;
+  cursor: pointer;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 18px;
+}
+.button:active {
+  background-color: rgb(114, 59, 165);
+}
