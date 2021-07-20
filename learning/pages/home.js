@@ -15,7 +15,7 @@ const Home = ({data})=>{
         <ul className={Styles.ul}>
           {data.map((item)=>{
             return(
-              <li>
+              <li key = {item._id}>
                 <Link href={`/institution/${item._id}`}>
                   <a>
                     <InstitutionCard
@@ -38,7 +38,6 @@ export async function getStaticProps(ctx) {
   const response = await axios.get(`${process.env.URL}api/institutions/getAll`);
   //await delay(2000);//ms
   const {status, institutions} = response.data;
-
   return{
     props: {
       data: status?institutions:[]
