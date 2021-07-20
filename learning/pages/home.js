@@ -4,13 +4,14 @@ import Link from 'next/link';
 import Styles from '../styles/default.module.css';
 import InstitutionCard from '../utils/components/institutionCard';
 
-const home = ({data})=>{
+const Home = ({data})=>{
 
   useState(()=>{
   },[])
   return(
     <div className={Styles.container}>
       <div className={Styles.subcontainer}>
+        <h1 style={{alignSelf: 'center'}}>Instituições</h1>
         <ul className={Styles.ul}>
           {data.map((item)=>{
             return(
@@ -31,7 +32,7 @@ const home = ({data})=>{
     </div>
   )
 }
-export default home;
+export default Home;
 
 export async function getStaticProps(ctx) {
   const response = await axios.get(`${process.env.URL}api/institutions/getAll`);
