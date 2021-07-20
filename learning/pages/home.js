@@ -35,7 +35,8 @@ const Home = ({data})=>{
 export default Home;
 
 export async function getStaticProps(ctx) {
-  const response = await axios.get(`${process.env.URL}api/institutions/getAll`);
+  //const response = await axios.get(`${process.env.URL}api/institutions/getAll`);
+  const response = await axios.get(`/api/institutions/getAll`);
   //await delay(2000);//ms
   const {status, institutions} = response.data;
   return{

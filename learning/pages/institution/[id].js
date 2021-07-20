@@ -28,7 +28,8 @@ export default institution
 
 export async function getStaticProps(ctx) {
   const id = ctx.params.id;
-  const response = await axios.get(`${process.env.URL}api/institutions/getById`,{
+  //const response = await axios.get(`${process.env.URL}api/institutions/getById`,{
+  const response = await axios.get(`/api/institutions/getById`,{
     params:{
       id: id
     }
@@ -58,7 +59,8 @@ export async function getStaticProps(ctx) {
   })
 }
 export async function getStaticPaths(){
-  const response = await axios.get(`${process.env.URL}api/institutions/getAll`);
+  //const response = await axios.get(`${process.env.URL}api/institutions/getAll`);
+  const response = await axios.get(`/api/institutions/getAll`);
   const {status, institutions} = response.data;
   const paths = institutions.map((item)=>{
     return {params: {id: item._id}};
