@@ -3,7 +3,7 @@ import connect from '../../utils/mongoConect';
 
 const User = async (req, res)=> {
   if(req.method == 'post'){
-    const {db} = await connect();
+    const {db} = await connect('nextProject');
     db.collection('users').insertOne({
       name: 'felipe',
       password: '123456789',

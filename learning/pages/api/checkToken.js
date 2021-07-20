@@ -12,7 +12,7 @@ const CheckToken = async (req, res)=> {
       res.status(200).json({status: false, msg: 'token doesnt exist' })
     }
 
-    const {db} = await connect();
+    const {db} = await connect('nextProject');
     console.log(JWT_SECRET)
     console.log(token)
     const tokenData = jwt.verify(token, JWT_SECRET);

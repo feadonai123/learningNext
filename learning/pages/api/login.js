@@ -6,7 +6,7 @@ const JWT_SECRET = 'jwt-muninn-secret';
 const Login = async (req, res)=> {
   if(req.method === 'GET'){
     const {username, password} = req.query;
-    const {db} = await connect();
+    const {db} = await connect('nextProject');
 
     const user = await db.collection('users').findOne({
       name: username,

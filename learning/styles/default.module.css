@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+}
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(100vw - 80px);
+  margin: 0 40px;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+.ul {
+  list-style: none;
+  padding: 0px;
+  margin: auto;
+}
+.ul li {
+  margin: 20px;
+  display: inline-block;
+}
+.input {
+  width: 100%;
+  border-width: 1px;
+  border-radius: 20px;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: black;
+  outline: 0;
+}
+.button {
+  outline: 0;
+  box-shadow: none;
+  cursor: pointer;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 18px;
+}
+.button:active {
+  background-color: rgb(114, 59, 165);
+}

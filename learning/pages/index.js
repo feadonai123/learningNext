@@ -1,3 +1,4 @@
+
 import axios from 'axios';
 import Cookies from 'cookies'
 import Head from 'next/head'
@@ -21,8 +22,8 @@ export default function Home() {
     </div>
   )
 }
-export async function getServerSideProps({req, res}) {
-  console.log("inicio")
+export async function getServerSideProps(ctx) {
+  const {req, res} = ctx;
   const cookies = new Cookies(req, res)
   const token = cookies.get('token')
   if(token){
